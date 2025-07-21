@@ -1,0 +1,8 @@
+2025-07-20 13:50:47,082 - INFO - Silver Layer processing started.
+2025-07-20 13:50:47,085 - INFO - Processing file: data/bronze\transactions_2025-07-20_13-50-30.json
+2025-07-20 13:50:47,122 - INFO - Saved cleaned transactions to data/silver\transactions_clean_2025-07-20_13-50-47.csv
+2025-07-20 13:50:47,122 - INFO - Saved cleaned accounts to data/silver\accounts_clean_2025-07-20_13-50-47.csv
+2025-07-20 13:50:47,320 - INFO - Inserted data into SQL Server table: Silver.stg_transactions
+2025-07-20 13:50:47,407 - INFO - Inserted data into SQL Server table: Silver.stg_accounts
+2025-07-20 13:50:47,412 - INFO - Metadata logged for data/bronze\transactions_2025-07-20_13-50-30.json
+2025-07-20 13:50:47,415 - INFO - Silver layer completed successfully!

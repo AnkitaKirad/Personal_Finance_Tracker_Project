@@ -1,0 +1,10 @@
+procedure,timestamp,status,layer
+Gold.sp_load_dim_account,2025-07-20_20-46-34,Failed,Gold
+Gold.sp_load_dim_category,2025-07-20_20-46-34,Failed,Gold
+Gold.sp_load_fact_transactions,2025-07-20_20-46-34,Failed,Gold
+Gold.sp_upsert_dim_account,2025-07-20_20-49-19,Success,Gold
+Gold.sp_load_dim_category,2025-07-20_20-49-19,Success,Gold
+Gold.sp_load_fact_transactions,2025-07-20_20-49-19,Success,Gold
+Gold.sp_upsert_dim_account,2025-07-20_20-50-10,Success,Gold
+Gold.sp_load_dim_category,2025-07-20_20-50-10,Success,Gold
+Gold.sp_load_fact_transactions,2025-07-20_20-50-10,Success,Gold
