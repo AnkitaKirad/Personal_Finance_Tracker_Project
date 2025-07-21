@@ -13,6 +13,15 @@ This project builds a complete data pipeline and warehouse to track and analyze 
 - **Database:** Microsoft SQL Server
 
 ---
+## 🔧 Tech Stack
+- **Python** – Data ingestion & transformation
+- **SQL Server** – DWH backend & procedural logic
+- **Pandas** – JSON flattening & preprocessing
+- **T-SQL Stored Procedures** – Gold layer logic
+- **ODBC** – Python-to-SQL connection
+- **Version Control** – Git & GitHub
+
+---
 ## 🏗️ Layers Explained
 
 ### 🥉 Bronze Layer
@@ -34,12 +43,12 @@ This project builds a complete data pipeline and warehouse to track and analyze 
 - Metadata logging for traceability
 
 ---
-🧱 Schema Design
-- Dimension Tables:
+## 🧱 Schema Design
+- ### Dimension Tables:
   - `dim_account`: All account-level metadata (type, holder, currency).
   - `dim_date`: Calendar table generated via recursive CTE.
   - `dim_category`: Extracted from transaction-level category array.
-- Fact Table:
+- ### Fact Table:
   - `fact_transactions`: Transaction fact table with FKs to dimensions and supporting attributes.
   
 ---
@@ -50,7 +59,6 @@ This project builds a complete data pipeline and warehouse to track and analyze 
   - Spending by merchant
 
 ---
-
 ## ✅ Key Features & Learnings
 
 - 🔁 **SCD Type 2 Implementation** in `dim_account` for historical tracking
