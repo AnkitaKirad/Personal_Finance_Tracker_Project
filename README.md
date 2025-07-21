@@ -3,25 +3,16 @@
 This project builds a complete data pipeline and warehouse to track and analyze personal financial transactions using the **Plaid API**. The goal is to apply modern data engineering and warehousing principles using a **medallion architecture** (Bronze → Silver → Gold) and implement **SCD Type 2** for dimension tracking.
 
 ---
-
 ## 🚀 Project Overview
 
 - **Domain:** Personal Finance
 - **Goal:** Build an end-to-end data warehouse to analyze and track financial transactions
+- **Tools & Technologies:** Python, Pandas, SQL, PyODBC, Dotenv, Plaid data
 - **Data Source:** JSON data exported from the **Plaid API**
 - **Architecture:** Medallion Architecture (Bronze → Silver → Gold)
 - **Database:** Microsoft SQL Server
-- **Tools & Technologies:** Python, Pandas, SQL, PyODBC, Dotenv, Plaid data
 
 ---
-
-## 📂 Architecture Diagram
-
-> *(Attach or link the visual diagram here)*  
-> Diagram should show: Bronze → Silver → Gold → Views → Reporting
-
----
-
 ## 🏗️ Layers Explained
 
 ### 🥉 Bronze Layer
@@ -43,7 +34,15 @@ This project builds a complete data pipeline and warehouse to track and analyze 
 - Metadata logging for traceability
 
 ---
-
+🧱 Schema Design
+- Dimension Tables:
+  - `dim_account`: All account-level metadata (type, holder, currency).
+  - `dim_date`: Calendar table generated via recursive CTE.
+  - `dim_category`: Extracted from transaction-level category array.
+- Fact Table:
+  - `fact_transactions`: Transaction fact table with FKs to dimensions and supporting attributes.
+  
+---
 ## 📊 Reporting Layer
 - SQL views created for common analytics:
   - Total monthly spending
