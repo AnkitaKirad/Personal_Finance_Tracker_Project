@@ -70,16 +70,78 @@ This project builds a complete data pipeline and warehouse to track and analyze 
 
 ---
 
-## 🧠 Learning Outcomes
+## 🧠 Highlights & Learning Outcomes
 
-- End-to-end ETL implementation
-- Warehouse design principles
-- Writing production-grade Python ETL scripts
-- Implementing SCD Type 2 manually
-- Creating reusable stored procedures
-- Working with financial APIs & semi-structured data
+- ✅ Implemented full **ETL** pipeline using Python and SQL Server
+- ✅ Applied **Medallion Architecture** in a real-world scenario
+- ✅ Designed a robust **star schema**
+- ✅ Implemented **SCD-1** logic using SQL Server Stored Procedures
+- ✅ Built **reporting views** for insights without dashboard tools
+- ✅ Learned how to handle data quality issues (NaNs, type mismatches, key violations)
+- ✅ Strengthened SQL Server stored procedure & CTE knowledge
 
 ---
 
 ## 📁 Folder Structure
 
+/plaid-dwh
+│
+├── /data
+|   ├── /bronze
+|   |     └── transactions_2025-07-20_13-50-30.json
+|   ├── /Silver
+|   |     ├──accounts_clean_2025-07-20_13-50-47.csv
+|   |     └──transactions_clean_2025-07-20_13-50-47.csv
+│   
+├── /DBScripts
+|   ├── DB_and_Schema_Creation_Scripts.sql
+|   ├── Login_and_User_Creation.sql
+|   ├── /silver
+|   |     └── ddl_silver.sql
+│   ├── /Gold
+|   |     ├── ddl_gold.sql
+│   |     ├── Load_dim_date_table.sql
+│   |     ├── sp_load_dim_account_table.sql
+│   |     ├── sp_load_dim_category_table.sql
+│   |     └── sp_load_fact_transactions_table.sql
+│   ├── /Reporting_Aggreated_Views
+|   |     ├── Create_View__spent_by_category.sql
+│   |     ├── Create_View__spent_on_per_merchant.sql
+│   |     ├── Create_View_monthly_spent.sql
+│   |     └── Create_View_monthly_spent_per_account.sql
+│
+├── /scripts
+│   ├── extract.py
+│   ├── transform.py
+│   └── load.py
+│
+├── /docs
+│   └── architecture.png
+│
+├── .env
+├── Folder_Creation_Script.py
+├── test_plaid.py
+└── readme.md
+
+---
+## 🛠️ Setup & Execution
+
+1. Configure `.env` for database credentials
+2. Place raw JSONs in `data/bronze`
+3. Run `silver_cleaner.py` to clean and load data to Silver layer
+4. Execute Gold layer stored procedures (or run `gold_loader.py`)
+5. Query reporting views from SQL Server
+
+---
+## 📌 Final Thoughts
+
+This project simulates a **real-world finance data platform**, showcasing:
+- Strong fundamentals in warehousing
+- Data modeling best practices
+- Hands-on pipeline building
+
+---
+## 🔗 Connect
+
+If you liked this project or learned from it, feel free to connect with me or check out more of my work!
+Linkedin: www.linkedin.com/in/ankitakirad
