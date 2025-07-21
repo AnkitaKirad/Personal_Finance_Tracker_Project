@@ -84,31 +84,32 @@ This project builds a complete data pipeline and warehouse to track and analyze 
 
 ## 📁 Folder Structure
 
+```text
 /plaid-dwh
 │
 ├── /data
-|   ├── /bronze
-|   |     └── transactions_2025-07-20_13-50-30.json
-|   ├── /Silver
-|   |     ├──accounts_clean_2025-07-20_13-50-47.csv
-|   |     └──transactions_clean_2025-07-20_13-50-47.csv
-│   
+│   ├── /bronze
+│   │     └── transactions_2025-07-20_13-50-30.json
+│   ├── /Silver
+│   │     ├── accounts_clean_2025-07-20_13-50-47.csv
+│   │     └── transactions_clean_2025-07-20_13-50-47.csv
+│
 ├── /DBScripts
-|   ├── DB_and_Schema_Creation_Scripts.sql
-|   ├── Login_and_User_Creation.sql
-|   ├── /silver
-|   |     └── ddl_silver.sql
+│   ├── DB_and_Schema_Creation_Scripts.sql
+│   ├── Login_and_User_Creation.sql
+│   ├── /silver
+│   │     └── ddl_silver.sql
 │   ├── /Gold
-|   |     ├── ddl_gold.sql
-│   |     ├── Load_dim_date_table.sql
-│   |     ├── sp_load_dim_account_table.sql
-│   |     ├── sp_load_dim_category_table.sql
-│   |     └── sp_load_fact_transactions_table.sql
+│   │     ├── ddl_gold.sql
+│   │     ├── Load_dim_date_table.sql
+│   │     ├── sp_load_dim_account_table.sql
+│   │     ├── sp_load_dim_category_table.sql
+│   │     └── sp_load_fact_transactions_table.sql
 │   ├── /Reporting_Aggreated_Views
-|   |     ├── Create_View__spent_by_category.sql
-│   |     ├── Create_View__spent_on_per_merchant.sql
-│   |     ├── Create_View_monthly_spent.sql
-│   |     └── Create_View_monthly_spent_per_account.sql
+│   │     ├── Create_View__spent_by_category.sql
+│   │     ├── Create_View__spent_on_per_merchant.sql
+│   │     ├── Create_View_monthly_spent.sql
+│   │     └── Create_View_monthly_spent_per_account.sql
 │
 ├── /scripts
 │   ├── extract.py
@@ -122,7 +123,7 @@ This project builds a complete data pipeline and warehouse to track and analyze 
 ├── Folder_Creation_Script.py
 ├── test_plaid.py
 └── readme.md
-
+```
 ---
 ## 🛠️ Setup & Execution
 
